@@ -1,6 +1,6 @@
 # Minimalist Calculator
 
-**See the whole thing working here: [vickylai.io/minimalist-calc](http://vickylai.io/minimalist-calc/)**
+**See the whole thing working here: [vickylai.io/minimalist-calc](https://vickylai.io/minimalist-calc/)**
 
 A simple responsive JavaScript calculator. Equivalent capabilities to a very smart monkey doing Grade 6 homework.
 
