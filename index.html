@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="description" content="A simple responsive JavaScript calculator. Equivalent capabilities to a very smart monkey doing Grade 6 homework.">
+
+    <title>Minimalist Calculator</title>
+
+    <!-- google fonts -->
+    <style type="text/css">
+        *{-webkit-box-sizing:border-box;box-sizing:border-box;margin:0}body{background:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}@media screen and (max-width:450px){body{background:#f4f7f7}}.container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;margin:.5rem;border:0 solid #000;max-height:100vh;max-width:500px;border:30px solid #f4f7f7;background-color:#f4f7f7;border-radius:5px;-webkit-box-shadow:10px 7px 8px rgba(0,0,0,.1);box-shadow:10px 7px 8px rgba(0,0,0,.1)}@media screen and (max-width:450px){.container{border:none;-webkit-box-shadow:none;box-shadow:none;margin:0}}.window{height:160px;margin-bottom:20px}@media screen and (max-width:450px){.window{height:4em;margin-bottom:10px}}.display{font-family:"Barlow Semi Condensed",sans serif;background:#222;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%;border-radius:5px;padding:20px;-webkit-box-shadow:-10px 0 25px #fff;box-shadow:-10px 0 25px #fff}@media screen and (max-width:450px){.display{padding:5px;margin:5px;width:auto}}#evaluate{height:100%;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:flex-end;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:right;color:#fff;font-size:3.5rem}@media screen and (max-width:450px){#evaluate{font-size:2.5rem}}.UI{height:600px;border:0 solid #000;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}@media screen and (max-width:450px){.UI{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;height:40%}}.num{width:85%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:justify;-ms-flex-align:justify;align-items:justify;border:0 solid #000}@media screen and (max-width:450px){.num{width:100%;height:35%}}.ops{width:15%;height:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;border:0 solid #000}@media screen and (max-width:450px){.ops{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-flow:row wrap;flex-flow:row wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:justify;width:100%;height:auto}}.btn{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;font-family:"Barlow Semi Condensed",sans serif;text-transform:uppercase;font-weight:300;letter-spacing:.24em;color:#222;border-width:0;border-radius:5px;border-style:solid;-webkit-box-shadow:-10px 0 25px #fff;box-shadow:-10px 0 25px #fff;line-height:1;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:relative;overflow:hidden;z-index:1}.number{width:20%;min-height:20%;margin:10px 40px 10px 0;font-size:2rem}@media screen and (max-width:450px){.number{margin:10px;width:25%;height:50px}}.operation{background:#222;margin:5px 0;font-size:1rem;width:100%}@media screen and (max-width:450px){.operation{height:2.5em;width:25%;margin:10px}}.btn::after,.btn::before{content:'';position:absolute;z-index:-1;height:110%;width:0;left:0;top:0;transform:skew(-50deg);-webkit-transform:skew(-50deg);-webkit-transform-origin:top left;transform-origin:top left}.btn-dark{color:#fff;border-color:#2a2b2b}.btn-dark::after,.btn-dark::before{background:#fff}.btn-light{color:#222;border-color:#2a2b2b}.btn-light::after,.btn-light::before{background:#222}
+    </style>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|VT323" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|VT323"></noscript>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <!-- project-specific javascript -->
+    <script type="text/javascript" src="assets/js/source.js"></script>
+
+    <!-- project CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/style.css"></noscript>
+    <script>!function(e){"use strict";var t=function(t,n,r){function o(e){if(i.body)return e();setTimeout(function(){o(e)})}function a(){d.addEventListener&&d.removeEventListener("load",a),d.media=r||"all"}var l,i=e.document,d=i.createElement("link");if(n)l=n;else{var s=(i.body||i.getElementsByTagName("head")[0]).childNodes;l=s[s.length-1]}var u=i.styleSheets;d.rel="stylesheet",d.href=t,d.media="only x",o(function(){l.parentNode.insertBefore(d,n?l:l.nextSibling)});var f=function(e){for(var t=d.href,n=u.length;n--;)if(u[n].href===t)return e();setTimeout(function(){f(e)})};return d.addEventListener&&d.addEventListener("load",a),d.onloadcssdefined=f,f(a),d};"undefined"!=typeof exports?exports.loadCSS=t:e.loadCSS=t}("undefined"!=typeof global?global:this),function(e){if(e.loadCSS){var t=loadCSS.relpreload={};if(t.support=function(){try{return e.document.createElement("link").relList.supports("preload")}catch(e){return!1}},t.poly=function(){for(var t=e.document.getElementsByTagName("link"),n=0;n<t.length;n++){var r=t[n];"preload"===r.rel&&"style"===r.getAttribute("as")&&(e.loadCSS(r.href,r,r.getAttribute("media")),r.rel=null)}},!t.support()){t.poly();var n=e.setInterval(t.poly,300);e.addEventListener&&e.addEventListener("load",function(){t.poly(),e.clearInterval(n)}),e.attachEvent&&e.attachEvent("onload",function(){e.clearInterval(n)})}}}(this);</script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="window">
+            <div class="display">
+                <div id="evaluate">Hi there!</div>
+            </div>
+        </div>
+        <div class="UI">
+            <div class="num">
+                <div class="btn btn-light number" value="1">1</div>
+                <div class="btn btn-light number" value="2">2</div>
+                <div class="btn btn-light number" value="3">3</div>
+                <div class="btn btn-light number" value="4">4</div>
+                <div class="btn btn-light number" value="5">5</div>
+                <div class="btn btn-light number" value="6">6</div>
+                <div class="btn btn-light number" value="7">7</div>
+                <div class="btn btn-light number" value="8">8</div>
+                <div class="btn btn-light number" value="9">9</div>
+                <div class="btn btn-light number" value="0">0</div>
+                <div class="btn btn-light number" value=".">.</div>
+                <div class="btn btn-light number" value="=">=</div>
+            </div>
+            <div class="ops">
+                <div class="btn btn-dark operation" value="Oops">Oops</div>
+                <div class="btn btn-dark operation" value="nvm">nvm</div>
+                <div class="btn btn-dark operation" value="/">/</div>
+                <div class="btn btn-dark operation" value="*">X</div>
+                <div class="btn btn-dark operation" value="-">-</div>
+                <div class="btn btn-dark operation" value="+">+</div>
+            </div>
+        </div>
+    </div>
+
+</body></html>
