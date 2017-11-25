@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-	const clicked = '',
+	let clicked = '',
 		display = '',
 		answer = '?';
 
