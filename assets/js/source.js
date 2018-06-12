@@ -59,21 +59,21 @@ $(document).ready(function () {
 								display += '0.';
 								$('#evaluate').html(display);
 							} else
-								if (lastTwo === '0.') {
-									console.log('last two: ' + lastTwo);
+							if (lastTwo === '0.') {
+								console.log('last two: ' + lastTwo);
+							} else
+								// if last char of display is not a number
+								if (isNaN(last)) {
+									console.log('last not number: ' + last);
+									display += '0.';
+									$('#evaluate').html(display);
 								} else
-									// if last char of display is not a number
-									if (isNaN(last)) {
-										console.log('last not number: ' + last);
-										display += '0.';
+									// if last char of display is a number
+									if (!isNaN(last) && last != '') {
+										console.log(last + ' is num')
+										display += '.';
 										$('#evaluate').html(display);
-									} else
-										// if last char of display is a number
-										if (!isNaN(last) && last != '') {
-											console.log(last + ' is num')
-											display += '.';
-											$('#evaluate').html(display);
-										}
+									}
 						}
 		}
 
