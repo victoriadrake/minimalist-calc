@@ -1,17 +1,17 @@
 # minimalist-calc: A simple responsive JavaScript calculator
 
-**See the whole thing working here: [vickylai.com/minimalist-calc](https://vickylai.com/minimalist-calc/)**
+**See the whole thing working here: [victoria.dev/minimalist-calc](https://victoria.dev/minimalist-calc/)**
 
 Equivalent capabilities to a very smart monkey doing Grade 6 homework.
 
-Created initially for [FreeCodeCamp](https://www.freecodecamp.com/vickylai)'s Front-End Developer Certification Course.
+Created initially for [FreeCodeCamp](https://www.freecodecamp.org/victoria.dev)'s Front-End Developer Certification Course.
 
 ## Screenshot
 
 ![Desktop view.](assets/img/screenshot.png)
 
 # License
-Copyright (C) 2018 Vicky Lai
+Copyright (C) 2018 Victoria Lai
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as
